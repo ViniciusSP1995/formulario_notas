@@ -1,0 +1,74 @@
+.container_header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    height: 150px;
+}
+
+.container_header h2 {
+    font-size: 50px;
+}
+
+.container_form {
+    display: flex;
+    justify-content: center;
+}
+
+.container_form form{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+form label {
+    font-size: 24px;
+    font-weight: bold
+}
+
+form input {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+button {
+    align-self: flex-end;
+    background-color: blue;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 6px 12px;
+    width: 200px;
+}
+
+li {
+    display: flex;
+    margin: 0px 200px;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    width: 800px;
+
+}
+
+.container_card {
+    margin-top: 50px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center !important;
+}
+
+table {
+    flex-direction: column nowrap;
+}
+
+th, td {
+    width:150px;
+    text-align:center;
+    border:1px solid black;
+    padding:5px
+ 
+}
+

@@ -1,0 +1,41 @@
+<section class="container_header">
+<h2>Formulário de notas </h2>
+</section>
+<section class="container_form">
+    <form action="" [formGroup]="formAluno" (ngSubmit)="enviarFormulario()">
+        <label for="nome">Nome: </label>
+        <input type="text" placeholder="Digite aqui seu nome" formControlName="nome">
+        <label for="nota1">Nota 1: </label>
+        <input type="text" placeholder="Digite aqui sua primeira nota" formControlName="nota1">
+        <label for="nota2">Nota 2: </label>
+        <input type="text" placeholder="Digite aqui sua segunda nota" formControlName="nota2"> 
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+<div class="container_card">
+    <table>
+        <thead *ngIf="formularios.length > 0">
+        <tr>
+            <th>Nome</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+            <th>Média</th>
+            <th>Aprovado</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let formulario of formularios">
+            <td>{{ formulario.nome }}</td>
+            <td>{{ formulario.nota1 }}</td>
+            <td>{{ formulario.nota2 }}</td>
+            <td>{{ formulario.media }}</td>
+            <td>
+                <p *ngIf="formulario.aprovado == true">Sim</p>
+                <p *ngIf="formulario.aprovado == false">Não</p>
+            </td>
+            <td><a (click)="removerFormulario(formulario.nome)"><i class="fa-regular fa-trash"></i></a></td>
+        </tr>
+        </tbody>
+     </table>
+     <div></div>
+</div>
